@@ -1,6 +1,7 @@
+#1. taking input from sensor : 
 import serial
 import time
-
+import pandas as pd 
 # Replace 'COM3' with your Arduino's port name (e.g., 'COM3' for Windows or '/dev/ttyACM0' for Linux/Mac)
 arduino_port = 'COM5'
 baud_rate = 9600  # Must match the Arduino baud rate
@@ -24,3 +25,14 @@ except KeyboardInterrupt:
 finally:
     if 'ser' in locals() and ser.is_open:
         ser.close()
+
+
+#2. store the data : 
+
+
+
+
+
+
+# data visualization : 
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hydration Tracker for {{ user['name'] }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/static/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hydration Tracker for {{ user['name'] }}</h1>
+      <p>Total Intake Today: {{ total_intake }} ml</p>
+
+      <h2>Add Water Intake</h2>
+      <form method="post">
+        <label for="amount">Amount (ml): </label>
+        <input type="number" name="amount" id="amount" step="50" required />
+        <button type="submit">Add Intake</button>
+      </form>
+
+      <h2>Daily Intake Graph</h2>
+      <img
+        src="data:image/png;base64,{{ plot_url }}"
+        alt="Daily Intake Graph"
+      />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+user_id,name,age,weight,activity_level
+1,Alice,25,65,medium
+2,Bob,30,80,high
+3,Charlie,20,70,low
